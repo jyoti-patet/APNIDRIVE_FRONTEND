@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
  import {motion} from 'motion/react'
 function Navbar() {
   const { setShowLogin, user, logout, isOwner, axios, setIsOwner, token } = useAppContext();
+  console.log(axios.defaults.baseURL)
 
   const location = useLocation();
   const [open, setOpen] = useState(false);
@@ -13,6 +14,7 @@ function Navbar() {
 
   // Function to change user role to owner
   const changeRole = async () => {
+    console.log("hiii jyotii");
     try {
       const { data } = await axios.post(
         '/api/owner/change-role',

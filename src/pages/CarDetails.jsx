@@ -16,7 +16,7 @@ function CarDetails() {
   const handleSubmit=async(e)=>{ 
     e.preventDefault()
     try{
-      const {data}= await axios.post('/api/booking/create',{
+      const {data}= await axios.post('/api/bookings/create',{
         car:id,
         pickupDate,
         returnDate,
@@ -127,7 +127,7 @@ function CarDetails() {
         <hr className='border-borderColor my-6'/>
         <div className='flex flex-col gap-2'>
           <label htmlFor="pickup-date">Pickup Date</label>
-          <input  value={pickupDate} onChange={()=>setPickupDate(e.target.value)}
+          <input  value={pickupDate} onChange={(e)=>setPickupDate(e.target.value)}
           type="date" className=' border border-borderColor px-3 py-3 rounded-lg' 
           required id='pickup-date' min={new Date().toISOString().split('T')[0]} />
 
@@ -135,7 +135,7 @@ function CarDetails() {
 
         <div className='flex flex-col gap-2'>
           <label htmlFor="return-date">Return Date</label>
-          <input  value={returnDate} onChange={()=>setReturnDate(e.target.value)}
+          <input  value={returnDate} onChange={(e)=>setReturnDate(e.target.value)}
            type="date" className=' border border-borderColor px-3 py-3 rounded-lg' required id='return-date' />
           
         </div>

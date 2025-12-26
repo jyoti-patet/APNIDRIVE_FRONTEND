@@ -15,7 +15,7 @@ function Cars() {
   const pickupDate=searchParams.get("pickupDate")
   const returnDate=searchParams.get("returnDate")
 
-  const{cars,axios}=useAppContext()
+  const{cars,axios}=useAppContext();
 
   const[input,setInput]=useState('')
   const isSearchData= pickupLocation && pickupDate && returnDate 

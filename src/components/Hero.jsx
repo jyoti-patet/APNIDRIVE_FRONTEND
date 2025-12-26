@@ -48,11 +48,11 @@ const Hero = () => {
           </div>
           <div className=' flex flex-col items-start gap-2'>
             <label htmlFor="pickup-date">pick-up Date</label>
-            <input  value={pickupDate} onChange={e=> setReturnDate(e.target.value)} type='date' id='pickup-date' min={new Date(). toISOString().split("T")[0]} className='text-sm text-gray-500' required/>
+            <input  value={pickupDate} onChange={e=> setPickupDate(e.target.value)} type='date' id='pickup-date' min={new Date(). toISOString().split("T")[0]} className='text-sm text-gray-500' required/>
           </div>
           <div className=' flex flex-col items-start gap-2'>
             <label htmlFor="return-date">Return Date</label>
-            <input value={returnDate} onChange={e=> setPickupDate(e.target.value)}  type='date' id='return-date'  min={new Date(). toISOString().split("T")[0]} className='text-sm text-gray-500' required/>
+            <input value={returnDate} onChange={e=> setReturnDate(e.target.value)}  type='date' id='return-date'  min={new Date(). toISOString().split("T")[0]} className='text-sm text-gray-500' required/>
           </div>
             
         </div>
